@@ -1,4 +1,8 @@
+using ExamTask4.Business.Services.Abstracts;
+using ExamTask4.Business.Services.Concretes;
+using ExamTask4.Core.RepositoryAbstract;
 using ExamTask4.Data.DAL;
+using ExamTask4.Data.RepositoryConcretes;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -10,6 +14,9 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+builder.Services.AddScoped<IChefService, ChefService>();
+
+builder.Services.AddScoped<IChefRepository, ChefRepository>();
 var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())

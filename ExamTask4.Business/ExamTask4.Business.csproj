@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ExamTask4.Data\ExamTask4.Data.csproj" />
+	  <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
 </Project>

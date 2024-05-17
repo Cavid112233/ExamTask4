@@ -17,4 +17,8 @@
     <ProjectReference Include="..\ExamTask4.Business\ExamTask4.Business.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\uploads\chefs\" />
+  </ItemGroup>
+
 </Project>
